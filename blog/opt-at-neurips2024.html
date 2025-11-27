@@ -3,143 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optimization at NeurIPS 2024</title>
+    <title>Optimization at NeurIPS 2024 - Mahdi Mostajabdaveh</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <header>
-        <h1>Optimization at NeurIPS 2024</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="index.html">Blog</a></li>
-            <li><a href="../projects/index.html">Projects</a></li>
-            <li><a href="../experiences/index.html">Experiences</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Mahdi Mostajabdaveh</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html" class="nav-link active">Blog</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-    <main>
-<pre>
-Optimization was one of the top five topics at NeurIPS 2024, reflecting a clear trend of increasing interest in this area compared to previous years. While optimization in machine learning often focuses on specific tasks like training neural networks (using algorithms such as gradient descent and its variants), my focus here is on optimization in a broader sense.
 
-This includes research exploring the use of AI methods for classical optimization problems, bridging the gap between traditional optimization techniques and modern AI-driven approaches. Below is a curated list of papers that stood out in this domain.
+    <main style="margin-top: 70px;">
+        <article class="section">
+            <div class="container" style="max-width: 900px;">
+                <h1 style="color: var(--color-primary); margin-bottom: 1rem;">Optimization at NeurIPS 2024</h1>
+                <p style="color: var(--color-text-light); margin-bottom: 2rem;">Notes on optimization research presented at NeurIPS 2024</p>
 
-Non-Linear Programming
+                <div style="line-height: 1.8;">
+                    <p>Optimization was one of the top five topics at NeurIPS 2024, reflecting a clear trend of increasing interest in this area compared to previous years. While optimization in machine learning often focuses on specific tasks like training neural networks (using algorithms such as gradient descent and its variants), my focus here is on optimization in a broader sense.</p>
 
-Dual Lagrangian Learning for Conic Optimization
-Poster  Paper
+                    <p>This includes research exploring the use of AI methods for classical optimization problems, bridging the gap between traditional optimization techniques and modern AI-driven approaches. Below is a curated list of papers that stood out in this domain.</p>
 
-BPQP A Differentiable Convex Optimization Framework for Efficient End-to-End Learning
-Poster  Paper
+                    <h2 style="color: var(--color-primary); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem;">Non-Linear Programming</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;">Dual Lagrangian Learning for Conic Optimization</li>
+                        <li style="margin-bottom: 0.5rem;">BPQP: A Differentiable Convex Optimization Framework for Efficient End-to-End Learning</li>
+                        <li style="margin-bottom: 0.5rem;">IPM-LSTM: A Learning-Based Interior Point Method for Solving Nonlinear Programs</li>
+                    </ul>
 
-IPM-LSTM A Learning-Based Interior Point Method for Solving Nonlinear Programs
-Poster  Paper
+                    <h2 style="color: var(--color-primary); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem;">Combinatorial Optimization</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;">Controlling Continuous Relaxation for Combinatorial Optimization</li>
+                        <li style="margin-bottom: 0.5rem;">Learning to Handle Complex Constraints for Vehicle Routing Problems</li>
+                        <li style="margin-bottom: 0.5rem;">ReEvo: Large Language Models as Hyper-Heuristics with Reflective Evolution</li>
+                    </ul>
 
-Combinatorial Optimization
+                    <h2 style="color: var(--color-primary); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem;">Stochastic and Contextual Optimization</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;">Optimal Algorithms for Online Convex Optimization with Adversarial Constraints</li>
+                        <li style="margin-bottom: 0.5rem;">Improved Algorithms for Contextual Dynamic Pricing</li>
+                        <li style="margin-bottom: 0.5rem;">Conformal Inverse Optimization</li>
+                        <li style="margin-bottom: 0.5rem;">Multi-Stage Predict+Optimize for (Mixed Integer) Linear Programs</li>
+                        <li style="margin-bottom: 0.5rem;">There is No Silver Bullet: Benchmarking Methods in Predictive Combinatorial Optimization</li>
+                        <li style="margin-bottom: 0.5rem;">Regret Minimization in Stackelberg Games with Side Information</li>
+                    </ul>
 
-Controlling Continuous Relaxation for Combinatorial Optimization
-Poster  Paper
+                    <h2 style="color: var(--color-primary); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem;">Linear Programming and MILP</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;">GLinSAT: The General Linear Satisfiability Neural Network Layer</li>
+                        <li style="margin-bottom: 0.5rem;">SymILO: A Symmetry-Aware Learning Framework for Integer Linear Optimization</li>
+                        <li style="margin-bottom: 0.5rem;">Learning Generalized Linear Programming Value Functions</li>
+                        <li style="margin-bottom: 0.5rem;">Rethinking the Capacity of Graph Neural Networks for Branching Strategy</li>
+                        <li style="margin-bottom: 0.5rem;">On the Power of Small-Size Graph Neural Networks for Linear Programming</li>
+                    </ul>
 
-Learning to Handle Complex Constraints for Vehicle Routing Problems
-Poster  Paper
+                    <h2 style="color: var(--color-primary); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem;">Application-Specific Optimization</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;">Randomized Sparse Matrix Compression for Large-Scale Constrained Optimization in Cancer Radiotherapy</li>
+                        <li style="margin-bottom: 0.5rem;">DistrictNet: Decision-Aware Learning for Geographical Districting</li>
+                        <li style="margin-bottom: 0.5rem;">Approximately Pareto-Optimal Solutions for Bi-Objective k-Clustering</li>
+                        <li style="margin-bottom: 0.5rem;">Autoregressive Policy Optimization for Constrained Allocation Tasks</li>
+                    </ul>
 
-ReEvo Large Language Models as Hyper-Heuristics with Reflective Evolution
-Poster  Paper
+                    <h2 style="color: var(--color-primary); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem;">New Perspectives</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;">Optimization Algorithm Design via Electric Circuits</li>
+                        <li style="margin-bottom: 0.5rem;">FERERO: A Flexible Framework for Preference-Guided Multi-Objective Learning</li>
+                    </ul>
 
-Stochastic and Contextual Optimization
+                    <h2 style="color: var(--color-primary); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem;">Optimization for Machine Learning</h2>
+                    <p>While there are many works related to optimization in machine learning, the following papers stood out for their relevance to OR techniques.</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;">Safe and Efficient: A Primal-Dual Method for Offline Convex CMDPs under Partial Data Coverage</li>
+                        <li style="margin-bottom: 0.5rem;">Gradient-Free Methods for Nonconvex Nonsmooth Stochastic Compositional Optimization</li>
+                        <li style="margin-bottom: 0.5rem;">Can Learned Optimization Make Reinforcement Learning Less Difficult</li>
+                        <li style="margin-bottom: 0.5rem;">Bayesian Nonparametrics Meets Data-Driven Distributionally Robust Optimization</li>
+                        <li style="margin-bottom: 0.5rem;">SequentialAttention++ for Block Sparsification: Differentiable Pruning Meets Combinatorial Optimization</li>
+                        <li style="margin-bottom: 0.5rem;">ROIDICE: Offline Return on Investment Maximization for Efficient Decision Making</li>
+                        <li style="margin-bottom: 0.5rem;">Adaptive Proximal Gradient Method for Convex Optimization</li>
+                        <li style="margin-bottom: 0.5rem;">Functional Bilevel Optimization for Machine Learning</li>
+                        <li style="margin-bottom: 0.5rem;">First-Order Minimax Bilevel Optimization</li>
+                    </ul>
+                </div>
 
-Optimal Algorithms for Online Convex Optimization with Adversarial Constraints
-Poster  Paper
-
-Improved Algorithms for Contextual Dynamic Pricing
-Poster  Paper
-
-Conformal Inverse Optimization
-Poster  Paper
-
-Multi-Stage Predict+Optimize for (Mixed Integer) Linear Programs
-Poster  Paper
-
-There is No Silver Bullet Benchmarking Methods in Predictive Combinatorial Optimization
-Poster  Paper
-
-Regret Minimization in Stackelberg Games with Side Information
-Poster  Paper
-
-Linear Programming and MILP
-
-GLinSAT The General Linear Satisfiability Neural Network Layer
-Poster  Paper
-
-SymILO A Symmetry-Aware Learning Framework for Integer Linear Optimization
-Poster  Paper
-
-Learning Generalized Linear Programming Value Functions
-Poster   Paper
-
-Rethinking the Capacity of Graph Neural Networks for Branching Strategy
-Poster  Paper
-
-On the Power of Small-Size Graph Neural Networks for Linear Programming
-Poster  Paper
-
-Application-Specific Optimization
-
-Randomized Sparse Matrix Compression for Large-Scale Constrained Optimization in Cancer Radiotherapy
-Poster  Paper
-
-DistrictNet Decision-Aware Learning for Geographical Districting
-Poster  Paper
-
-Approximately Pareto-Optimal Solutions for Bi-Objective k-Clustering
-Poster  Paper
-
-Autoregressive Policy Optimization for Constrained Allocation Tasks
-Poster  Paper
-
-New Perspectives
-
-Optimization Algorithm Design via Electric Circuits
-Poster  Paper
-
-FERERO A Flexible Framework for Preference-Guided Multi-Objective Learning
-Poster  Paper
-
-Optimization for Machine Learning
-
-While there are many works related to optimization in machine learning, the following papers stood out for their relevance to OR techniques.
-
-Safe and Efficient A Primal-Dual Method for Offline Convex CMDPs under Partial Data Coverage
-Poster  Paper
-
-Gradient-Free Methods for Nonconvex Nonsmooth Stochastic Compositional Optimization
-Poster  Paper
-
-Can Learned Optimization Make Reinforcement Learning Less Difficult
-Poster  Paper
-
-Bayesian Nonparametrics Meets Data-Driven Distributionally Robust Optimization
-Poster  Paper
-
-SequentialAttention++ for Block Sparsification Differentiable Pruning Meets Combinatorial Optimization
-Poster  Paper
-
-ROIDICE Offline Return on Investment Maximization for Efficient Decision Making
-Poster  Paper
-
-Adaptive Proximal Gradient Method for Convex Optimization
-Poster  Paper
-
-Functional Bilevel Optimization for Machine Learning
-Poster  Paper
-
-First-Order Minimax Bilevel Optimization
-Poster  Paper</pre>
+                <div style="margin-top: 3rem;">
+                    <a href="index.html" class="btn">Back to Blog</a>
+                </div>
+            </div>
+        </article>
     </main>
-    <footer>
-        <p>&copy; 2025 Mahdi Mostajab</p>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mahdi Mostajabdaveh. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

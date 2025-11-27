@@ -3,33 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Printing Production Scheduling</title>
+    <title>Online Printing Production Scheduling - Mahdi Mostajabdaveh</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <header>
-        <h1>Online Printing Production Scheduling</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="index.html">Blog</a></li>
-            <li><a href="../projects/index.html">Projects</a></li>
-            <li><a href="../experiences/index.html">Experiences</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Mahdi Mostajabdaveh</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html" class="nav-link active">Blog</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-    <main>
-<pre>
-It might be the case that you order to print a custom-made happy birthday cart for someone before, or at least think about it and check a few websites that offer this kind of services. Now days online shopping is the main selling channel for almost every industry. You might be supersized to find out the even Domins order their special pizza boxes to printing companies online. 
 
-Online printing orders has very tight deadlines and and very low margin profits for the printing companies. Thus, efficient use of equipment and material is crucial for printing companies. This is where Operations Research can help. 
+    <main style="margin-top: 70px;">
+        <article class="section">
+            <div class="container" style="max-width: 800px;">
+                <h1 style="color: var(--color-primary); margin-bottom: 1rem;">Online Printing Production Scheduling</h1>
+                <p style="color: var(--color-text-light); margin-bottom: 2rem;">Applying optimization to handle tight deadlines in online printing</p>
 
-In collaborative with an online printing company, we designed a fast, flexible and reliable optimization algorithm. Our algorithm decide on the printing plate layout, number of copies necessary from each plate and the printing date of the plate. A simple implementation of the algorithm in Python can be found in the following GitHub repository (github.com/mahdims/2D-Bin-packing).</pre>
+                <div style="line-height: 1.8;">
+                    <p>It might be the case that you order to print a custom-made happy birthday card for someone before, or at least think about it and check a few websites that offer this kind of services. Nowadays online shopping is the main selling channel for almost every industry. You might be surprised to find out that even Domino's orders their special pizza boxes to printing companies online.</p>
+
+                    <p>Online printing orders have very tight deadlines and very low profit margins for the printing companies. Thus, efficient use of equipment and material is crucial for printing companies. This is where Operations Research can help.</p>
+
+                    <p>In collaboration with an online printing company, we designed a fast, flexible, and reliable optimization algorithm. Our algorithm decides on the printing plate layout, number of copies necessary from each plate, and the printing date of the plate. A simple implementation of the algorithm in Python can be found in the following GitHub repository (<a href="https://github.com/mahdims/2D-Bin-packing" target="_blank" rel="noopener">github.com/mahdims/2D-Bin-packing</a>).</p>
+                </div>
+
+                <div style="margin-top: 3rem;">
+                    <a href="index.html" class="btn">Back to Blog</a>
+                </div>
+            </div>
+        </article>
     </main>
-    <footer>
-        <p>&copy; 2025 Mahdi Mostajab</p>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mahdi Mostajabdaveh. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
