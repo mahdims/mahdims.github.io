@@ -216,6 +216,31 @@ a:hover {
     font-weight: 500;
 }
 
+.hero-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.hero-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--color-bg-alt);
+    border-radius: 50%;
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+.hero-social-link:hover {
+    background: var(--color-accent);
+    color: white;
+    transform: translateY(-2px);
+}
+
 .hero-right {
     text-align: left;
 }
