@@ -270,12 +270,17 @@ a:hover {
 }
 
 /* Publication Categories */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
 .publication-category {
     background: var(--color-bg);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    margin-bottom: 2rem;
     border-left: 4px solid var(--color-accent);
 }
 
@@ -542,6 +547,10 @@ a:hover {
 
     .container {
         padding: 0 1.5rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
     }
 
     .publication-category {
