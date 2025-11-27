@@ -7,27 +7,360 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Mahdi Mostajab</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog/index.html">Blog</a></li>
-            <li><a href="projects/index.html">Projects</a></li>
-            <li><a href="experiences/index.html">Experiences</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Mahdi Mostajab</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
     </nav>
+
     <main>
-        <h2>Welcome</h2>
-        <p>This site shares updates on my research, blog posts and ongoing projects.</p>
-        <p>Check out the blog for posts on optimization, operations research and other topics.</p>
-        <p>Learn more <a href="about.html">about me</a> or <a href="contact.html">get in touch</a>.</p>
+        <section id="about" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-left">
+                        <div class="hero-photo">
+                            <!-- Add your photo here: <img src="path/to/your-photo.jpg" alt="Mahdi Mostajabdaveh"> -->
+                            <div class="photo-placeholder">Photo</div>
+                        </div>
+                        <h1 class="hero-title">Mahdi Mostajabdaveh</h1>
+                        <p class="hero-subtitle">Operations Research Scientist</p>
+                        <p class="hero-subtitle">AI & Optimization</p>
+                    </div>
+                    <div class="hero-right">
+                        <div class="about-content">
+                            <p>I am an Operations Research scientist with a decade of experience in algorithm design (meta/heuristic, exact optimization) and machine learning methods to solve challenging business problems.</p>
+
+                            <p>Currently, I am a <strong>Staff Scientist</strong> at the Huawei Vancouver Research Center and the <strong>AI Lead</strong> for the Huawei Optimization Solver (<strong>OptVers</strong>). I direct research efforts on AI integration with our solver to improve its performance and usability. You can see benchmarks for our solver's performance <a href="https://plato.asu.edu/bench.html" target="_blank" rel="noopener">here</a>.</p>
+
+                            <p>Previously, I was a postdoctoral research fellow at the Department of Mathematics and Industrial Engineering of <a href="https://www.polymtl.ca/" target="_blank" rel="noopener">Polytechnique Montreal</a> and <a href="https://www.cirrelt.ca/" target="_blank" rel="noopener">CIRRELT</a> under the supervision of <a href="https://scholar.google.ca/citations?user=CilK624AAAAJ&hl=en" target="_blank" rel="noopener">Prof. Michel Gendreau</a> and <a href="https://scholar.google.ca/citations?user=C_zcTIAAAAAJ&hl" target="_blank" rel="noopener">Prof. Teodor Crainic</a>. I received my Ph.D. in Industrial Engineering and Operations Management from <a href="https://www.ku.edu.tr/en/" target="_blank" rel="noopener">Koc University</a>.</p>
+
+                            <h3>Research Interests</h3>
+                            <p>My current research interest falls into two broad topics:</p>
+                            <ol>
+                                <li>Using ML and optimization methods for practical applications, including last-mile and middle-mile logistics, production scheduling, and power distribution systems.</li>
+                                <li>Leveraging AI to enhance optimization methods, including using ML to improve heuristics and branch-and-bound, and applying LLMs for optimization modeling and interpretable OR.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Publications & Presentations</h2>
+
+                <!-- AI for Operations Research -->
+                <div class="publication-category">
+                    <h3 class="category-title">AI for Operations Research</h3>
+                    <div class="papers-list">
+                        <article class="paper-item">
+                            <h4>NL4Opt Competition: Formulating Optimization Problems Based on Their Natural Language Descriptions</h4>
+                            <p class="paper-authors">R Ramamonjison, T Yu, R Li, H Li, G Carenini, B Ghaddar, S He, et al.</p>
+                            <p class="paper-venue">NeurIPS 2022 Competition Track, 189-203 | Citations: 95 (2023)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                            </div>
+                        </article>
+
+                        <article class="paper-item">
+                            <h4>Optimization Modeling and Verification from Problem Specifications Using a Multi-Agent Multi-Stage LLM Framework</h4>
+                            <p class="paper-authors">M Mostajabdaveh, TT Yu, R Ramamonjison, G Carenini, Z Zhou, Y Zhang</p>
+                            <p class="paper-venue">INFOR: Information Systems and Operational Research 62 (4), 599-617 | Citations: 23 (2024)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                            </div>
+                        </article>
+
+                        <article class="paper-item">
+                            <h4>Evaluating LLM Reasoning in the Operations Research Domain with ORQA</h4>
+                            <p class="paper-authors">M Mostajabdaveh, TTL Yu, SCB Dash, R Ramamonjison, JS Byusa, et al.</p>
+                            <p class="paper-venue">Proceedings of the AAAI Conference on Artificial Intelligence 39 (23), 24902-24910 | Citations: 9 (2025)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                            </div>
+                        </article>
+
+                        <article class="paper-item">
+                            <h4>Towards Human-Aligned Evaluation for Linear Programming Word Problems</h4>
+                            <p class="paper-authors">L Xing, X Wang, Y Feng, Z Fan, J Xiong, Z Guo, X Fu, R Ramamonjison, et al.</p>
+                            <p class="paper-venue">Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation | Citations: 5 (2024)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                            </div>
+                        </article>
+
+                        <article class="paper-item">
+                            <h4>LaTeX2Solver: A Hierarchical Semantic Parsing of LaTeX Document into Code for an Assistive Optimization Modeling Application</h4>
+                            <p class="paper-authors">R Ramamonjison, T Yu, L Xing, M Mostajabdaveh, X Li, X Fu, X Han, et al.</p>
+                            <p class="paper-venue">Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics | Citations: 2 (2023)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                            </div>
+                        </article>
+
+                        <article class="paper-item">
+                            <h4>EvoCut: Strengthening Integer Programs via Evolution-Guided Language Models</h4>
+                            <p class="paper-authors">M Yazdani, M Mostajabdaveh, S Aref, Z Zhou</p>
+                            <p class="paper-venue">arXiv preprint arXiv:2508.11850 (2025)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                            </div>
+                        </article>
+
+                        <article class="paper-item">
+                            <h4>SMARTAPS: Tool-Augmented LLMs for Operations Management</h4>
+                            <p class="paper-authors">TTL Yu, M Mostajabdaveh, JS Byusa, R Ramamonjison, G Carenini, et al.</p>
+                            <p class="paper-venue">arXiv preprint arXiv:2507.17927 (2025)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                            </div>
+                        </article>
+
+                        <article class="paper-item">
+                            <h4>Methods and Systems for Specification Extraction and Model Building Using Language Models</h4>
+                            <p class="paper-authors">M Mostajabdaveh, R Ramamonjison, TTL Yu, L Xing, JS Byusa, Z Fan, et al.</p>
+                            <p class="paper-venue">WO Patent WO2025043698A1 (2025)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                            </div>
+                        </article>
+
+                        <article class="paper-item">
+                            <h4>Methods and Systems for Explainable Template Retrieval for Optimization Modeling</h4>
+                            <p class="paper-authors">T Yu, R Ramamonjison, M Mostajabdaveh, Y Zhan</p>
+                            <p class="paper-venue">WO Patent WO2024174195A1 (2024)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- MAS Optimization -->
+                <div class="publication-category">
+                    <h3 class="category-title">Multi-Agent System (MAS) Optimization</h3>
+                    <div class="papers-list">
+                        <article class="paper-item">
+                            <h4>MASPRM: Multi-Agent System Process Reward Model</h4>
+                            <p class="paper-authors">M Yazdani, M Mostajabdaveh, Z Zhou, Y Xiong</p>
+                            <p class="paper-venue">arXiv preprint arXiv:2510.24803 (2025)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Real-World Applications -->
+                <div class="publication-category">
+                    <h3 class="category-title">Optimization Real-World Applications</h3>
+                    <div class="papers-list">
+                        <article class="paper-item">
+                            <h4>Inequity-Averse Shelter Location for Disaster Preparedness</h4>
+                            <p class="paper-authors">M Mostajabdaveh, WJ Gutjahr, F Sibel Salman</p>
+                            <p class="paper-venue">IISE Transactions 51 (8), 809-829 | Citations: 78 (2019)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                                <a href="blog/disaster-and-equity.html" class="paper-link">Blog Post</a>
+                            </div>
+                        </article>
+
+                        <article class="paper-item">
+                            <h4>Two Dimensional Guillotine Cutting Stock and Scheduling Problem in Printing Industry</h4>
+                            <p class="paper-authors">M Mostajabdaveh, FS Salman, N Tahmasbi</p>
+                            <p class="paper-venue">Computers & Operations Research 148, 106014 | Citations: 20 (2022)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                                <a href="blog/online-printing-production-scheduling.html" class="paper-link">Blog Post</a>
+                            </div>
+                        </article>
+
+                        <article class="paper-item">
+                            <h4>A Branch-and-Price Algorithm for Fast and Equitable Last-Mile Relief Aid Distribution</h4>
+                            <p class="paper-authors">M Mostajabdaveh, FS Salman, WJ Gutjahr</p>
+                            <p class="paper-venue">European Journal of Operational Research 324 (2), 522-537 | Citations: 6 (2025)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- OR Fundamental Works -->
+                <div class="publication-category">
+                    <h3 class="category-title">OR Fundamental Works</h3>
+                    <div class="papers-list">
+                        <article class="paper-item">
+                            <h4>Analyzing Modularity Maximization in Approximation, Heuristic, and Graph Neural Network Algorithms for Community Detection</h4>
+                            <p class="paper-authors">S Aref, M Mostajabdaveh</p>
+                            <p class="paper-venue">Journal of Computational Science 78, 102283 | Citations: 22 (2024)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                            </div>
+                        </article>
+
+                        <article class="paper-item">
+                            <h4>Bayan Algorithm: Detecting Communities in Networks Through Exact and Approximate Optimization of Modularity</h4>
+                            <p class="paper-authors">S Aref, M Mostajabdaveh, H Chheda</p>
+                            <p class="paper-venue">Physical Review E 110 (4), 044315 | Citations: 21 (2024)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                            </div>
+                        </article>
+
+                        <article class="paper-item">
+                            <h4>Heuristic Modularity Maximization Algorithms for Community Detection Rarely Return an Optimal Partition or Anything Similar</h4>
+                            <p class="paper-authors">S Aref, M Mostajabdaveh, H Chheda</p>
+                            <p class="paper-venue">23rd International Conference on Computational Science ICCS 2023 | Citations: 17 (2023)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                            </div>
+                        </article>
+
+                        <article class="paper-item">
+                            <h4>Discrete Optimization of Min-Max Violation and Its Applications Across Computational Sciences</h4>
+                            <p class="paper-authors">C Ahmed, M Mostajabdaveh, S Aref, Z Zhou</p>
+                            <p class="paper-venue">arXiv preprint arXiv:2508.13437 (2025)</p>
+                            <div class="paper-links">
+                                <a href="#" class="paper-link">PDF</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-content">
+                    <p>Explore my research projects and practical applications of optimization and machine learning.</p>
+                    <a href="projects/index.html" class="btn">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Recent Blog Posts</h2>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <h3><a href="blog/opt-at-neurips2024.html">Optimization at NeurIPS 2024</a></h3>
+                        <p>Insights from the latest advances in AI-driven optimization presented at NeurIPS 2024.</p>
+                    </article>
+
+                    <article class="blog-card">
+                        <h3><a href="blog/online-printing-production-scheduling.html">Online Printing Production Scheduling</a></h3>
+                        <p>A deep dive into production scheduling challenges and algorithmic solutions.</p>
+                    </article>
+
+                    <article class="blog-card">
+                        <h3><a href="blog/disaster-and-equity.html">Disaster and Equity</a></h3>
+                        <p>Examining the role of equity in disaster management and resource allocation.</p>
+                    </article>
+                </div>
+                <a href="blog/index.html" class="btn">View All Posts</a>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-content">
+                    <p>Feel free to reach out for collaborations, research opportunities, or just to connect.</p>
+
+                    <div class="social-links">
+                        <a href="https://github.com/mahdims" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mahdi-mostajabdaveh/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="https://scholar.google.com/citations?hl=en&user=TKmUJokAAAAJ" target="_blank" rel="noopener" class="social-link" aria-label="Google Scholar">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+                        </a>
+                        <a href="mailto:your.email@example.com" class="social-link" aria-label="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Mahdi Mostajab</p>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mahdi Mostajab. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add active state to nav on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
