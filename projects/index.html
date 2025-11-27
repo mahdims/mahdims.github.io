@@ -3,33 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Projects - Mahdi Mostajabdaveh</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <header>
-        <h1>Projects</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../blog/index.html">Blog</a></li>
-            <li><a href="../projects/index.html">Projects</a></li>
-            <li><a href="../experiences/index.html">Experiences</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Mahdi Mostajabdaveh</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+                <li><a href="../blog/index.html" class="nav-link">Blog</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-    <main>
-        <p>This page highlights some of my recent projects. For detailed writeups visit the blog.</p>
-        <ul>
-            <li><a href="../blog/disaster-and-equity.html">Disaster and Equity</a> &ndash; optimizing shelter locations.</li>
-            <li><a href="../blog/online-printing-production-scheduling.html">Online Printing Production Scheduling</a> &ndash; improving printing workflow.</li>
-            <li><a href="../blog/opt-at-neurips2024.html">Optimization at NeurIPS 2024</a> &ndash; conference highlights.</li>
-        </ul>
+
+    <main style="margin-top: 70px;">
+        <section class="section">
+            <div class="container">
+                <h1 style="text-align: center; margin-bottom: 2rem; color: var(--color-primary);">Research Projects</h1>
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; color: var(--color-text-light);">
+                    Explore my research projects and practical applications of optimization and machine learning.
+                </p>
+
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <h3><a href="../blog/disaster-and-equity.html">Disaster and Equity</a></h3>
+                        <p>Optimizing shelter locations for equitable disaster preparedness in urban areas. Addressing fairness and accessibility in emergency planning.</p>
+                    </article>
+
+                    <article class="blog-card">
+                        <h3><a href="../blog/online-printing-production-scheduling.html">Online Printing Production Scheduling</a></h3>
+                        <p>Applying advanced optimization techniques to improve printing workflow efficiency and handle tight deadlines in the online printing industry.</p>
+                    </article>
+
+                    <article class="blog-card">
+                        <h3><a href="../blog/opt-at-neurips2024.html">Optimization at NeurIPS 2024</a></h3>
+                        <p>Insights and highlights from optimization research presented at NeurIPS 2024, exploring the latest advances in AI and optimization methods.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Mahdi Mostajab</p>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mahdi Mostajabdaveh. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
