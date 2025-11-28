@@ -62,6 +62,33 @@
                         <h3>Beating SOTA on Large Scale CVRP</h3>
                         <p>More details coming soon.</p>
                     </article>
+
+                    <article class="blog-card">
+                        <h3>Bayan Algorithm: Rigorous Community Detection via Exact Modularity Optimization</h3>
+                        <p><strong>Challenge:</strong> Community detection algorithms typically use heuristics with no optimality guarantees. Our research shows that <strong>sub-optimal partitions are disproportionately dissimilar to any optimal partition</strong>, even when their modularity scores are near-maximum.</p>
+
+                        <p><strong>Technical Innovation:</strong> Bayan solves the NP-hard modularity maximization problem using a specialized <strong>Branch-and-Cut scheme</strong> with novel triangular constraint-based cuts. For a violated node triple (i,j,k), we partition the solution space via two distinct cut types:</p>
+                        <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                            <li><strong>Left cut (equating membership):</strong> x<sub>ij</sub> + x<sub>ik</sub> + x<sub>jk</sub> = 0</li>
+                            <li><strong>Right cut (disallowing co-membership):</strong> x<sub>ij</sub> + x<sub>ik</sub> + x<sub>jk</sub> ≥ 2</li>
+                        </ul>
+                        <p>This disjunction enables efficient exploration of the feasible space through targeted branching strategies (e.g., supernode replacement for left subproblems).</p>
+
+                        <p><strong>Empirical Results:</strong></p>
+                        <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                            <li><strong>Accuracy:</strong> Consistently ranked <strong>top-3 out of 30 algorithms</strong> for retrieving planted communities (highest AMI on LFR/ABCD benchmarks)</li>
+                            <li><strong>Quality:</strong> Best median performance across 5 metrics (description length, coverage, performance, average conductance, well-clusteredness) on 1000 networks</li>
+                            <li><strong>Speed:</strong> <strong>3.7× faster than Gurobi IP</strong> and <strong>15.5× faster than igraph</strong> on average; solved instances unsolvable by alternatives within 4-hour limits</li>
+                            <li><strong>Critical finding:</strong> Standard heuristics achieved global optimality in only <strong>43.9%</strong> of 104 networks analyzed</li>
+                        </ul>
+
+                        <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem; flex-wrap: wrap;">
+                            <a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.110.044315" target="_blank" rel="noopener" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Paper (PRE)</a>
+                            <a href="https://arxiv.org/abs/2310.10898" target="_blank" rel="noopener" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Analysis Paper</a>
+                            <a href="https://bayanproject.github.io/" target="_blank" rel="noopener" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Website</a>
+                            <a href="https://github.com/saref/bayan" target="_blank" rel="noopener" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">GitHub</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
