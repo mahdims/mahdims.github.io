@@ -11,8 +11,8 @@
     --color-bg-alt: #f8f9fa;
     --color-border: #e0e0e0;
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --max-width: 1000px;
-    --nav-height: 70px;
+    --max-width: 1200px;
+    --nav-height: 60px;
     --transition: all 0.3s ease;
 }
 
@@ -160,7 +160,7 @@ a:hover {
 /* Hero Section */
 .hero {
     margin-top: var(--nav-height);
-    padding: 4rem 0;
+    padding: 2.5rem 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
     border-bottom: 1px solid var(--color-border);
 }
@@ -247,7 +247,7 @@ a:hover {
 
 /* Sections */
 .section {
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
 
 .section-alt {
@@ -256,10 +256,10 @@ a:hover {
 
 .section-title {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     color: var(--color-primary);
     position: relative;
-    padding-bottom: 1rem;
+    padding-bottom: 0.75rem;
 }
 
 .section-title::after {
@@ -298,12 +298,12 @@ a:hover {
 .categories-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .publication-category {
     background: var(--color-bg);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     border-left: 4px solid var(--color-accent);
@@ -311,20 +311,20 @@ a:hover {
 
 .category-title {
     color: var(--color-primary);
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.4rem;
     border-bottom: 2px solid var(--color-bg-alt);
 }
 
 .papers-list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.75rem;
 }
 
 .paper-item {
-    padding: 1rem;
+    padding: 0.85rem;
     background: var(--color-bg-alt);
     border-radius: 6px;
     transition: var(--transition);
