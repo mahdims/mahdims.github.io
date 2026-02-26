@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Research Intelligence System - Mahdi Mostajabdaveh</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Mahdi Mostajabdaveh</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html" class="nav-link active">Blog</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="margin-top: 70px;">
+        <article class="section">
+            <div class="container" style="max-width: 900px;">
+                <a href="index.html" style="display: inline-block; margin-bottom: 1.5rem; color: var(--color-text-light); font-size: 0.95rem;">← Back to Blog</a>
+                <h1 style="color: var(--color-primary); margin-bottom: 1rem;">Building a Research Intelligence System</h1>
+                <p style="color: var(--color-text-light); margin-bottom: 2rem;">How I automated ArXiv monitoring into a four-layer pipeline that reads papers, detects research trends, and delivers daily briefings</p>
+
+                <div style="line-height: 1.8;">
+
+                    <p>Keeping up with the literature is one of the most time-consuming parts of research. Between ArXiv, conference proceedings, and citation trails, it is easy to spend hours every week just deciding what to read — before actually reading anything. I built a system to solve this problem for myself, and it turned out general enough to work for any research domain.</p>
+
+                    <p>The <strong>Research Intelligence System</strong> is an open-source, four-layer pipeline that transforms ArXiv paper aggregation into structured research intelligence. Each layer builds on the previous one: fetching and scoring papers, deeply analyzing their content, detecting emerging research fronts through citation networks, and finally producing living literature reviews and daily email briefings. The whole thing runs automatically via GitHub Actions.</p>
+
+                    <p>The system is designed for any research topic. If you work in AI for healthcare, climate modeling, or anything else, you configure two files — a domain definition and a researcher profile — and the pipeline adapts without any code changes.</p>
+
+                    <h2 style="color: var(--color-primary); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem;">Layer 0: Fetch &amp; Score</h2>
+
+                    <p>The first layer is responsible for acquiring papers and deciding which ones matter. It uses two complementary search strategies: keyword-based search against the ArXiv API, and citation graph crawling via Semantic Scholar starting from a set of seed papers you define. This dual strategy catches both new work in your area and papers that cite work you already care about.</p>
+
+                    <p>Each paper is then scored 0–10 by an LLM using your category description and researcher context as the prompt. Scores and PDFs are cached to avoid redundant API calls across runs. Code links are automatically discovered via Papers with Code and GitHub search. The output is a set of JSON files and a human-readable README that summarizes what was found.</p>
+
+                    <h2 style="color: var(--color-primary); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem;">Layer 1: Deep Analysis</h2>
+
+                    <p>For papers that pass the relevance threshold, Layer 1 runs a four-agent pipeline against the full PDF. The agents are specialized:</p>
+
+                    <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>Reader</strong> — extracts the problem, methodology, experiments, and key results</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Methods Extractor</strong> — tags the techniques used and traces methodological lineage ("builds on X", "extends Y")</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Positioning Agent</strong> — scores the paper's relevance to your active projects specifically, and explains why</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Synthesis Controller</strong> — merges the three outputs and writes to the database</li>
+                    </ul>
+
+                    <p>All outputs are structured via Pydantic schemas using Gemini's structured output mode, so downstream layers get reliable JSON rather than free-form text. The cost is roughly $0.01 per paper using Gemini Flash.</p>
+
+                    <h2 style="color: var(--color-primary); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem;">Layer 2: Bibliometric Fronts</h2>
+
+                    <p>This is the most technically interesting layer. It builds a directed citation graph from Semantic Scholar, then constructs a co-citation network using Salton's cosine similarity between paper pairs. Louvain community detection finds clusters — these are the <em>research fronts</em>, groups of papers that the community collectively cites together.</p>
+
+                    <p>Each detected front is summarized by an LLM into a trend description. The system also identifies <em>bridge papers</em> — papers that connect two or more otherwise separate fronts — which are often the most strategically interesting to read. Results are stored in the database and can be visualized as citation graphs.</p>
+
+                    <h2 style="color: var(--color-primary); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem;">Layer 3: Living Reviews &amp; Email Briefings</h2>
+
+                    <p>The final layer maintains a continuously updated literature review for each research category. It operates on three cycles:</p>
+
+                    <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>Daily</strong> — new papers are appended to the existing review structure</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Weekly</strong> — sections are restructured, narrative is added, research fronts are highlighted</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Monthly</strong> — a full rewrite with new organization reflecting how the field has evolved</li>
+                    </ul>
+
+                    <p>On the email side, a unified daily briefing covers all categories, while weekly deep-dive emails go category by category. Citation graph visualizations are embedded directly in the emails. Everything is delivered via Gmail SMTP and committed back to the repository, giving you an audit trail of how your understanding of the field evolved.</p>
+
+                    <h2 style="color: var(--color-primary); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem;">Adapting to Any Domain</h2>
+
+                    <p>The system was designed from the start to be domain-agnostic. To use it for a new research area, you edit two configuration files:</p>
+
+                    <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>research_domain.yaml</strong> — defines your categories, ArXiv filters, and keywords</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>researcher_profile.md</strong> — describes your active projects and research interests, used to personalize the relevance scoring in Layers 0 and 1</li>
+                    </ul>
+
+                    <p>No code changes are needed. The same pipeline that monitors AI for optimization can be pointed at computer vision, drug discovery, or climate science by changing these two files.</p>
+
+                    <h2 style="color: var(--color-primary); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem;">Cost</h2>
+
+                    <p>Running the full pipeline on 100 papers costs roughly $1.35 using Gemini Flash: $0.05 for relevance scoring in Layer 0, $1.00 for the four-agent deep analysis in Layer 1, $0.20 for front summarization in Layer 2, and $0.10 for email generation in Layer 3. The caching strategy means subsequent runs on the same paper pool cost almost nothing. In practice, running the full automated workflow on a regular schedule comes to around <strong>$2 per week</strong>.</p>
+
+                    <p>The code, configuration schema, and an example setup for AI &amp; Optimization research are available on GitHub. The associated paper collection for OR and AI is also open:</p>
+
+                    <div style="margin: 2rem 0;">
+                        <a href="https://github.com/mahdims/Awesome-OR-AI" target="_blank" rel="noopener" class="btn">Code on GitHub</a>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mahdi Mostajabdaveh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

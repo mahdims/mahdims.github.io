@@ -1,0 +1,23 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Claude
+.claude/
+
+# Node (if using build tools)
+node_modules/
+
+# Logs
+*.log
+
+# WordPress copy
+mahdimostajab_copy/

@@ -604,6 +604,53 @@ a:hover {
     }
 }
 
+/* Project card toggle */
+#projects .blog-card {
+    padding: 1.25rem 1.5rem;
+}
+
+#projects .blog-card h3 {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+#projects .blog-card .btn {
+    margin-top: 0;
+}
+
+.card-toggle-icon {
+    font-size: 1rem;
+    color: var(--color-accent);
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+    line-height: 1.3;
+}
+
+#projects .blog-card.expanded .card-toggle-icon {
+    transform: rotate(180deg);
+}
+
+.card-description {
+    display: none;
+}
+
+#projects .blog-card.expanded .card-description {
+    display: block;
+}
+
+/* Projects page read-more */
+.card-read-more {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
 @media (max-width: 480px) {
     .hero-title {
         font-size: 1.75rem;

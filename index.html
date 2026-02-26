@@ -80,8 +80,20 @@
                 <h2 class="section-title">Selected Projects</h2>
                 <div class="blog-grid">
                     <article class="blog-card">
-                        <h3>Tool-Augmented LLMs for Operations Management</h3>
+                        <h3>&#127942; 1st Place — 2026 CVRPLIB BKS Challenge <span class="card-toggle-icon">▾</span></h3>
+                        <div class="card-description">
+                        <p>Our <strong>OptVerse-CityU</strong> team won the gold standard benchmark for vehicle routing, producing <strong>51 new Best Known Solutions</strong> across 100 ultra-large CVRP instances (1,000–10,000 customers) by combining LLM-driven Evolution of Heuristics (EoH) with a massively parallel AILS-II search framework — an effort I led from the OptVerse side.</p>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+                            <a href="https://galgos.inf.puc-rio.br/cvrplib/index.php/en/bks_challenge/score/" target="_blank" rel="noopener" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Leaderboard</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <h3>Tool-Augmented LLMs for Operations Management <span class="card-toggle-icon">▾</span></h3>
+                        <div class="card-description">
                         <p><strong>SmartAPS</strong> is an agentic conversational system that transforms how operations planners interact with Advanced Planning Systems. Using tool-augmented LLMs with retrieval-based API selection, it enables natural language what-if and why-not scenario analyses, reducing consultant dependency from days to hours.</p>
+                        </div>
                         <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
                             <a href="https://www.youtube.com/watch?v=KtIrJjlDbyw" target="_blank" rel="noopener" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Watch Video</a>
                             <a href="https://arxiv.org/abs/2507.17927" target="_blank" rel="noopener" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Read Paper</a>
@@ -90,8 +102,10 @@
                     </article>
 
                     <article class="blog-card">
-                        <h3>Generative AI For Optimization Modeling</h3>
+                        <h3>Generative AI For Optimization Modeling <span class="card-toggle-icon">▾</span></h3>
+                        <div class="card-description">
                         <p>Started in 2022, this project aims to democratize operations research by using AI to automatically convert natural language business problems into mathematical optimization models. We established the first benchmark in the field with <strong>NL4OPT</strong> (presented at <strong>NeurIPS 2022 Competition</strong>), developed multi-agent systems, created the first reasoning benchmark in OR modeling (<strong>ORQA</strong>), and introduced graph-based model evaluation metrics.</p>
+                        </div>
                         <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
                             <a href="materials/SomeProgressTowardsAI4OR.pdf" target="_blank" rel="noopener" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Slides</a>
                             <a href="https://nl4opt.github.io/" target="_blank" rel="noopener" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">NL4Opt Website</a>
@@ -99,8 +113,13 @@
                     </article>
 
                     <article class="blog-card">
-                        <h3>HybridMind: AI-Human Collaboration for Algorithmic Ideation</h3>
-                        <p>More details coming soon.</p>
+                        <h3>VRP-Agent: AI-Powered VRP Identification <span class="card-toggle-icon">▾</span></h3>
+                        <div class="card-description">
+                        <p><strong>VRP-Agent</strong> automatically analyzes natural language routing problem descriptions to detect VRP features (capacity, time windows, fleet composition, pickup-delivery, etc.), classify the VRP variant, and recommend an appropriate solver — with confidence scores, detailed reasoning, and an interactive Q&amp;A clarification system.</p>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+                            <a href="https://vrp-agent.vercel.app/" target="_blank" rel="noopener" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Live Demo</a>
+                        </div>
                     </article>
                 </div>
 
@@ -223,6 +242,11 @@
                 <h2 class="section-title">Recent Blog Posts</h2>
                 <div class="blog-grid">
                     <article class="blog-card">
+                        <h3><a href="blog/research-intelligence-system.html">Building a Research Intelligence System</a></h3>
+                        <p>How I automated ArXiv monitoring into a four-layer AI pipeline that reads papers, detects emerging research fronts, and delivers daily briefings.</p>
+                    </article>
+
+                    <article class="blog-card">
                         <h3><a href="blog/opt-at-neurips2024.html">Optimization at NeurIPS 2024</a></h3>
                         <p>Insights from the latest advances in AI-driven optimization presented at NeurIPS 2024.</p>
                     </article>
@@ -303,6 +327,13 @@
                         behavior: 'smooth'
                     });
                 }
+            });
+        });
+
+        // Project card toggle
+        document.querySelectorAll('#projects .blog-card').forEach(card => {
+            card.querySelector('h3').addEventListener('click', () => {
+                card.classList.toggle('expanded');
             });
         });
 
