@@ -42,18 +42,18 @@
             <div class="container">
                 <h1 style="text-align: center; margin-bottom: 1rem; color: var(--color-primary);">Systems</h1>
                 <p style="text-align: center; max-width: 760px; margin: 0 auto 2.5rem; color: var(--color-text-light);">
-                    Things that run: production frameworks, competition entries, demos, and open-source code. Each card gives the problem, the result, and where to look.
+                    Production systems, research infrastructure, competition entries, and open-source implementations. Each card states the problem, the delivered capability, and the result.
                 </p>
                 <div class="blog-grid">
                     <article class="blog-card system-card">
                         <h3>OptvEvolve: LLM-driven algorithm evolution in production</h3>
                         <p class="sys-line"><span class="sys-label">Problem.</span> New business requirements used to mean weeks of hand-designing and tuning heuristics.</p>
-                        <p class="sys-line"><span class="sys-label">Result.</span> A modular evolutionary framework in which LLMs propose, evolve, and tune optimization algorithms against solver-verified fitness, with persistent memory across runs, self-improvement, and a human-in-the-loop channel. Deployed to cloud resource allocation and scaling at Huawei, cutting integration cycles from weeks to days.</p>
+                        <p class="sys-line"><span class="sys-label">Result.</span> A modular evolutionary framework in which LLMs propose, evolve, and tune optimization algorithms against executable performance tests. It was deployed to cloud resource allocation and scaling at Huawei, cutting integration cycles from weeks to days.</p>
                     </article>
                     <article class="blog-card system-card">
                         <h3>Evaluating coding agents on a production solver (Kinaxis)</h3>
                         <p class="sys-line"><span class="sys-label">Problem.</span> Coding agents can change a solver codebase quickly. Knowing whether a change is safe, and whether it helps, is the hard part.</p>
-                        <p class="sys-line"><span class="sys-label">Result.</span> An on-premises harness that runs agent-made changes to the production MILP solver against correctness checks and performance benchmarks, so each change is scored on verifiable signals rather than on the agent's own account of it. Methodology stage; results will be shared when they can be.</p>
+                        <p class="sys-line"><span class="sys-label">Scope.</span> An on-premises harness that runs agent-made changes to the production MILP solver against correctness checks and performance benchmarks. The program is in its methodology stage; measured results will follow when they can be shared.</p>
                     </article>
                     <article class="blog-card system-card">
                         <h3>SmartAPS: tool-augmented LLMs for operations management</h3>
@@ -76,7 +76,7 @@
                     <article class="blog-card system-card">
                         <h3>1st place, 2026 CVRPLIB Best Known Solutions Challenge</h3>
                         <p class="sys-line"><span class="sys-label">Problem.</span> The benchmark's largest instances, 1,000 to 10,000 customers, had best known solutions that stood for years.</p>
-                        <p class="sys-line"><span class="sys-label">Result.</span> Our OptVerse-CityU team combined Evolution of Heuristics, where LLMs and evolutionary search design the operators, with an enhanced AILS-II framework of massively parallel search, shared elite solutions, and dynamic warm starts. Result: 51 new best known solutions across 100 instances and first place, with the solver as the only judge.</p>
+                        <p class="sys-line"><span class="sys-label">Result.</span> Our OptVerse-CityU team combined evolved operators with an enhanced AILS-II framework using parallel search, shared elite solutions, and dynamic warm starts. The entry finished first with 51 new best known solutions across 100 instances.</p>
                         <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem; flex-wrap: wrap;">
                             <a href="https://galgos.inf.puc-rio.br/cvrplib/index.php/en/bks_challenge/score/" target="_blank" rel="noopener" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Leaderboard</a>
                             <a href="/materials/CVRPLIB-BKS-Certificate.pdf" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Certificate</a>
@@ -97,6 +97,8 @@
 
                 <h2 style="text-align: center; margin: 3rem 0 1.5rem; color: var(--color-primary); font-size: 1.5rem;">Open-source code</h2>
                 <div class="repo-grid">
+                    <div class="repo-card"><a href="https://github.com/milad1378yz/MASPRM" target="_blank" rel="noopener">MASPRM</a><p>Process reward model for multi-agent search</p></div>
+                    <div class="repo-card"><a href="https://github.com/cheikh025/LHS" target="_blank" rel="noopener">Latent Heuristic Search</a><p>Continuous optimization for automated algorithm design</p></div>
                     <div class="repo-card"><a href="https://github.com/nl4opt/nl4opt-competition" target="_blank" rel="noopener">nl4opt/nl4opt-competition</a><p>NL4Opt competition data and baselines</p></div>
                     <div class="repo-card"><a href="https://github.com/mahdims/3D-bin-packing" target="_blank" rel="noopener">3D-bin-packing</a><p>Tabu search and genetic algorithm for container loading</p></div>
                     <div class="repo-card"><a href="https://github.com/mahdims/Branch-and-price-" target="_blank" rel="noopener">Branch-and-price-</a><p>Branch-and-price for humanitarian aid distribution</p></div>

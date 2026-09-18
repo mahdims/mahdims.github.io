@@ -699,6 +699,30 @@ a:hover {
     font-size: 0.75rem;
 }
 
+.impact-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin: 1.25rem 0 1.5rem;
+}
+
+.impact-strip span {
+    display: block;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text-light);
+    font-size: 0.82rem;
+    line-height: 1.35;
+}
+
+.impact-strip strong {
+    display: block;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+    margin-bottom: 0.15rem;
+}
+
 .themes-mini {
     list-style: none;
     margin-bottom: 0.75rem;
@@ -753,6 +777,15 @@ a:hover {
     align-items: start;
 }
 
+.research-lede {
+    max-width: 800px;
+    margin: 0 auto 1rem;
+}
+
+.research-lede-last {
+    margin-bottom: 2.5rem;
+}
+
 .theme-card {
     background: var(--color-bg);
     padding: 1.5rem;
@@ -787,6 +820,16 @@ a:hover {
 .review-list .venue {
     color: var(--color-text-light);
     font-size: 0.85rem;
+}
+
+.topic-label {
+    display: block;
+    color: var(--color-primary);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 0.15rem;
 }
 
 .tag-review {
@@ -839,6 +882,13 @@ details.earlier-work:not([open]) summary {
     font-size: 0.95rem;
 }
 
+.paper-summary {
+    color: var(--color-text);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin: 0.55rem 0 0.75rem;
+}
+
 .sys-label {
     font-weight: 600;
     color: var(--color-primary);
@@ -866,6 +916,12 @@ details.earlier-work:not([open]) summary {
     margin: 0.2rem 0 0;
     color: var(--color-text-light);
     font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .impact-strip {
+        grid-template-columns: 1fr;
+    }
 }
 
 .blog-year {
