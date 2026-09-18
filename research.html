@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Mahdi Mostajabdaveh</title>
+    <meta name="description" content="Research themes: process supervision and verifiers for agents, memory without gradients, test-time compute and search, and verifiable optimization with LLMs.">
+    <link rel="canonical" href="https://mahdims.github.io/research.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mahdi Mostajabdaveh">
+    <meta property="og:title" content="Research - Mahdi Mostajabdaveh">
+    <meta property="og:description" content="Research themes: process supervision and verifiers for agents, memory without gradients, test-time compute and search, and verifiable optimization with LLMs.">
+    <meta property="og:url" content="https://mahdims.github.io/research.html">
+    <meta property="og:image" content="https://mahdims.github.io/Mahdi.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Research - Mahdi Mostajabdaveh">
+    <meta name="twitter:description" content="Research themes: process supervision and verifiers for agents, memory without gradients, test-time compute and search, and verifiable optimization with LLMs.">
+    <meta name="twitter:image" content="https://mahdims.github.io/Mahdi.png">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Mahdi Mostajabdaveh</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/research.html" class="nav-link active">Research</a></li>
+                <li><a href="/publications.html" class="nav-link">Publications</a></li>
+                <li><a href="/projects/index.html" class="nav-link">Systems</a></li>
+                <li><a href="/blog/index.html" class="nav-link">Blog</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main style="margin-top: 70px;">
+        <section class="section">
+            <div class="container">
+                <h1 style="text-align: center; margin-bottom: 1rem; color: var(--color-primary);">Research</h1>
+                <p style="text-align: center; max-width: 760px; margin: 0 auto 2.5rem; color: var(--color-text-light);">
+                    Test-time intelligence for frozen models: verifiers, process rewards, memory, and compute allocation, grounded in verifiable signals.
+                </p>
+                <p style="max-width: 760px; margin: -1rem auto 2.5rem;">
+                    A fixed model can make better decisions at inference time if it has a reliable signal to
+                    check itself against. My background in operations research supplies those signals: solvers,
+                    feasibility checks, and bounds give exact verification at low cost. The four themes below share
+                    that structure. Work under anonymous review is described without titles or venues; papers move
+                    to the <a href="/publications.html">publications page</a> as decisions and preprints appear.
+                </p>
+                <div class="theme-grid">
+                    <article class="theme-card" id="verifiers">
+                        <h3>Process supervision and verifiers for agents</h3>
+                        <p class="theme-blurb">Score an agent's intermediate steps, not only its final answer, so that selection and search can happen before a costly or irreversible action is taken.</p>
+                        <ul>
+                            <li><a href="/publications.html#masprm">MASPRM: Multi-Agent System Process Reward Model</a><br><span class="venue">arXiv preprint arXiv:2510.24803 (2025)</span></li>
+                            <li><a href="/publications.html#orqa">Evaluating LLM Reasoning in the Operations Research Domain with ORQA</a><br><span class="venue">Proceedings of the AAAI Conference on Artificial Intelligence (2025)</span></li>
+                            <li>Submissions under review on checking a generative model's candidate actions before they run. <span class="tag-review">under review</span></li>
+                            <li>An evaluation harness for coding agents that change a production optimization solver, scored on correctness and solver performance. <span class="tag-review">in progress</span></li>
+                        </ul>
+                    </article>
+                    <article class="theme-card" id="memory">
+                        <h3>Memory and adaptation without gradients</h3>
+                        <p class="theme-blurb">Let a frozen model improve across runs by storing and retrieving what worked, instead of fine-tuning it.</p>
+                        <ul>
+                            <li><a href="/publications.html#sedima">SEDIMA: memory for search agents</a><br><span class="venue">EMNLP 2026 workshop, accepted as a spotlight</span></li>
+                            <li>Submissions under review on memory for frozen models and on transferable designs for multi-agent systems. <span class="tag-review">under review</span></li>
+                            <li>HERMES, a memory architecture for multi-agent systems. <span class="tag-review">in progress</span></li>
+                        </ul>
+                    </article>
+                    <article class="theme-card" id="compute">
+                        <h3>Test-time compute and search</h3>
+                        <p class="theme-blurb">Decide how much computation a decision deserves and how to spend it: search over heuristics, over agent trajectories, and over model rollouts.</p>
+                        <ul>
+                            <li><a href="/publications.html#coagents">COAgents: Multi-Agent Framework to Learn and Navigate Routing Problems Search Space</a><br><span class="venue">LION 20: Learning and Intelligent Optimization Conference (2026)</span></li>
+                            <li><a href="/publications.html#lhs">Latent Heuristic Search: Continuous Optimization for Automated Algorithm Design</a><br><span class="venue">LION 20: Learning and Intelligent Optimization Conference (2026)</span></li>
+                            <li>Submissions under review on compute allocation for embodied agents and on representation quality in vision-language models. <span class="tag-review">under review</span></li>
+                        </ul>
+                    </article>
+                    <article class="theme-card" id="optimization">
+                        <h3>Verifiable optimization with LLMs</h3>
+                        <p class="theme-blurb">Optimization solvers give exact and cheap verification. They serve as the judge and the reward for LLM-generated models, algorithms, and cuts.</p>
+                        <ul>
+                            <li><a href="/publications.html#evocut">EvoCut: Strengthening Integer Programs via Evolution-Guided Language Models</a><br><span class="venue">arXiv preprint arXiv:2508.11850 (2025)</span></li>
+                            <li><a href="/publications.html#smartaps">SmartAPS: Tool-Augmented LLMs for Operations Management</a><br><span class="venue">AAAI 2025 Bridge on AI and ORMS; arXiv:2507.17927 (2025)</span></li>
+                            <li><a href="/publications.html#infor">Optimization Modeling and Verification from Problem Specifications Using a Multi-Agent Multi-Stage LLM Framework</a><br><span class="venue">INFOR: Information Systems and Operational Research (2024)</span></li>
+                            <li><a href="/publications.html#lrec">Towards Human-Aligned Evaluation for Linear Programming Word Problems</a><br><span class="venue">LREC-COLING 2024</span></li>
+                            <li><a href="/publications.html#latex2solver">LaTeX2Solver: A Hierarchical Semantic Parsing of LaTeX Document into Code for an Assistive Optimization Modeling Application</a><br><span class="venue">ACL 2023, System Demonstrations</span></li>
+                            <li><a href="/publications.html#nl4opt">NL4Opt Competition: Formulating Optimization Problems Based on Their Natural Language Descriptions</a><br><span class="venue">NeurIPS 2022 Competition Track, PMLR (2023)</span></li>
+                            <li>Submissions under review on benchmarks for optimization modeling and on LLM-evolved structure for mixed-integer solving. <span class="tag-review">under review</span></li>
+                            <li><a href="/projects/index.html">OptvEvolve</a> and the <a href="/projects/index.html">CVRPLIB BKS Challenge</a> win: evolutionary search with the solver as the verifier.<br><span class="venue">Systems, 2025 to 2026</span></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Mahdi Mostajabdaveh. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -21,3 +21,6 @@ node_modules/
 
 # WordPress copy
 mahdimostajab_copy/
+
+# Local site notes (not published)
+CLAUDE.md
