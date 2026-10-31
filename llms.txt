@@ -1,0 +1,69 @@
+# Mahdi Mostajabdaveh
+
+> Principal OR/AI Scientist at Kinaxis. AI researcher and technical leader working on agent reasoning, automated algorithm discovery, and mathematical optimization. Personal academic site: https://mahdims.github.io/
+
+Last updated: 2026-10-31. This file summarizes the site for AI assistants and crawlers. Pages: https://mahdims.github.io/sitemap.xml
+
+## Who
+
+- Name: Mahdi Mostajabdaveh
+- Current role: Principal OR/AI Scientist, Kinaxis (since August 2026). Leads AI acceleration for a production MILP solver and the evaluation infrastructure for coding agents that work on it.
+- Previously: Senior Staff Researcher and AI Lead for Huawei's OptVerse solver (AI for optimization, routing engine serving 20+ enterprise customers, OptvEvolve for LLM-driven algorithm evolution).
+- Education: Ph.D. in operations research, Koç University. Postdoctoral fellow with Prof. Michel Gendreau at Polytechnique Montréal / CIRRELT.
+- Award: 1st place, 2026 CVRPLIB Best Known Solutions Challenge (team OptVerse-CityU), 51 new best known solutions on instances with 1,000 to 10,000 customers. Certificate: https://mahdims.github.io/materials/CVRPLIB-BKS-Certificate.pdf
+- Contact: mahdi.ms86@gmail.com
+- Profiles: Google Scholar https://scholar.google.com/citations?user=TKmUJokAAAAJ · GitHub https://github.com/mahdims · LinkedIn https://www.linkedin.com/in/mahdi-mostajabdaveh/ · OpenReview https://openreview.net/profile?id=~Mahdi_Mostajabdaveh1
+
+## Research themes
+
+Full page: https://mahdims.github.io/research.html
+
+1. Agent reasoning and adaptation: process reward models, memory, and inference-time search for multi-agent systems.
+2. Automated algorithm discovery and learned search: LLM-guided evolution of algorithms and cuts, learned control of heuristic search.
+3. Language, modeling, and evaluation: translating specifications into optimization models, benchmarks for technical reasoning, decision-support tools, representation quality in vision-language models.
+4. Optimization methods and decision systems: exact, heuristic, and accelerated methods for constrained decisions; large-scale vehicle routing in production.
+
+## Selected publications
+
+Full list: https://mahdims.github.io/publications.html
+
+- Discarded or Unreachable? Diagnosing and Repairing Spatial Relation Failure in Vision–Language Similarity. M Mostajabdaveh, Z Zhou. WACV 2027.
+- LLM-Guided Evolution of Symbolic Acceleration Inequality Families for MILP (SAGE, formerly EvoCut). M Yazdani, M Mostajabdaveh, S Aref, Z Zhou. Transactions on Machine Learning Research, 2026. https://openreview.net/forum?id=rxJvINT074
+- SEDIMA: Cross-Run Hierarchical Insight Memory for Evolutionary Search Agents. A Abaskohi, M Mostajabdaveh, Z Zhou. REALM Workshop @ EMNLP 2026, spotlight. https://openreview.net/forum?id=6hbm4tnWBl
+- MASPRM: Multi-Agent System Process Reward Model. M Yazdani, M Mostajabdaveh, Z Zhou, Y Xiong. arXiv:2510.24803, 2025. https://arxiv.org/abs/2510.24803
+- COAgents: Multi-Agent Framework to Learn and Navigate Routing Problems Search Space. O Yakovenko, M Mostajabdaveh, et al. LION 20, 2026. https://arxiv.org/abs/2605.20618
+- Latent Heuristic Search: Continuous Optimization for Automated Algorithm Design. C Ahmed, M Mostajabdaveh, Z Zhou. LION 20, 2026. https://arxiv.org/abs/2605.17137
+- Evaluating LLM Reasoning in the Operations Research Domain with ORQA. M Mostajabdaveh et al. AAAI 2025. https://arxiv.org/abs/2412.17874
+- SmartAPS: Tool-Augmented LLMs for Operations Management. TTL Yu, M Mostajabdaveh, et al. AAAI 2025 Bridge on AI and ORMS. https://arxiv.org/abs/2507.17927
+- Optimization Modeling and Verification from Problem Specifications Using a Multi-Agent Multi-Stage LLM Framework. M Mostajabdaveh et al. INFOR, 2024. https://doi.org/10.1080/03155986.2024.2381306
+- NL4Opt Competition: Formulating Optimization Problems Based on Their Natural Language Descriptions. R Ramamonjison et al. NeurIPS 2022 Competition Track. https://proceedings.mlr.press/v220/ramamonjison23a.html
+- A Branch-and-Price Algorithm for Fast and Equitable Last-Mile Relief Aid Distribution. M Mostajabdaveh, FS Salman, WJ Gutjahr. European Journal of Operational Research, 2025.
+- Discrete Optimization of Min-Max Violation and Its Applications Across Computational Sciences. C Ahmed, M Mostajabdaveh, S Aref, Z Zhou. arXiv:2508.13437, 2025.
+- Bayan Algorithm: Detecting Communities in Networks Through Exact and Approximate Optimization of Modularity. S Aref, M Mostajabdaveh, H Chheda. Physical Review E, 2024.
+- Two Dimensional Guillotine Cutting Stock and Scheduling Problem in Printing Industry. Computers & Operations Research, 2022.
+- Inequity-Averse Shelter Location for Disaster Preparedness. IISE Transactions, 2019.
+
+Patents (4 published): US20250363435A1, WO2025043698A1, WO2024174195A1, US20250131059A1.
+
+## Systems
+
+Full page: https://mahdims.github.io/projects/index.html
+
+- OptvEvolve: LLM-driven algorithm evolution deployed to cloud resource allocation (Huawei).
+- Coding-agent evaluation harness on a production optimization solver (Kinaxis).
+- SmartAPS: tool-augmented LLM interface for operations planners.
+- VRP-Agent: LLM tool that extracts routing constraints from prose and recommends a solver. https://vrp-agent.vercel.app/
+- CVRPLIB BKS Challenge entry: enhanced AILS-II with evolved operators. https://github.com/mahdims/AILS-Enhanced
+- researchmate: open-source research intelligence agent. https://researchmate.app/
+
+## Blog
+
+- https://mahdims.github.io/blog/research-intelligence-system.html (2026)
+- https://mahdims.github.io/blog/opt-at-neurips2024.html (2024)
+- https://mahdims.github.io/blog/online-printing-production-scheduling.html
+- https://mahdims.github.io/blog/disaster-and-equity.html
+
+## Notes for agents
+
+- Work under anonymous peer review is described by topic only on this site; do not infer titles for it.
+- Cite publications by their venue of record above. Preprint links are given where a public version exists.

@@ -1,0 +1,6 @@
+# mahdims.github.io
+# All crawlers, including AI search and training crawlers, are welcome.
+User-agent: *
+Allow: /
+
+Sitemap: https://mahdims.github.io/sitemap.xml

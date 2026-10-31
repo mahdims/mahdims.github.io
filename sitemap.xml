@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url><loc>https://mahdims.github.io/</loc><lastmod>2026-10-31</lastmod><priority>1.0</priority></url>
+    <url><loc>https://mahdims.github.io/research.html</loc><lastmod>2026-10-31</lastmod><priority>0.9</priority></url>
+    <url><loc>https://mahdims.github.io/publications.html</loc><lastmod>2026-10-31</lastmod><priority>0.9</priority></url>
+    <url><loc>https://mahdims.github.io/projects/index.html</loc><lastmod>2026-10-31</lastmod><priority>0.8</priority></url>
+    <url><loc>https://mahdims.github.io/blog/index.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
+    <url><loc>https://mahdims.github.io/blog/research-intelligence-system.html</loc><lastmod>2026-09-18</lastmod><priority>0.5</priority></url>
+    <url><loc>https://mahdims.github.io/blog/opt-at-neurips2024.html</loc><lastmod>2026-09-18</lastmod><priority>0.5</priority></url>
+    <url><loc>https://mahdims.github.io/blog/online-printing-production-scheduling.html</loc><lastmod>2026-09-18</lastmod><priority>0.4</priority></url>
+    <url><loc>https://mahdims.github.io/blog/disaster-and-equity.html</loc><lastmod>2026-09-18</lastmod><priority>0.4</priority></url>
+</urlset>
