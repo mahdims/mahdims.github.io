@@ -882,6 +882,26 @@ details.earlier-work:not([open]) summary {
     font-size: 0.95rem;
 }
 
+.system-card .cert-link {
+    display: block;
+    margin: 0.75rem 0 0.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.system-card .cert-link:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.system-card .cert-link img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .paper-summary {
     color: var(--color-text);
     font-size: 0.92rem;
