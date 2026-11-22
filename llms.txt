@@ -2,7 +2,7 @@
 
 > Principal OR/AI Scientist at Kinaxis. AI researcher and technical leader working on agent reasoning, automated algorithm discovery, and mathematical optimization. Personal academic site: https://mahdims.github.io/
 
-Last updated: 2026-10-31. This file summarizes the site for AI assistants and crawlers. Pages: https://mahdims.github.io/sitemap.xml
+Last updated: 2026-11-21. This file summarizes the site for AI assistants and crawlers. Pages: https://mahdims.github.io/sitemap.xml
 
 ## Who
 
@@ -30,7 +30,8 @@ Full list: https://mahdims.github.io/publications.html
 - Discarded or Unreachable? Diagnosing and Repairing Spatial Relation Failure in Vision–Language Similarity. M Mostajabdaveh, Z Zhou. WACV 2027.
 - LLM-Guided Evolution of Symbolic Acceleration Inequality Families for MILP (SAGE, formerly EvoCut). M Yazdani, M Mostajabdaveh, S Aref, Z Zhou. Transactions on Machine Learning Research, 2026. https://openreview.net/forum?id=rxJvINT074
 - SEDIMA: Cross-Run Hierarchical Insight Memory for Evolutionary Search Agents. A Abaskohi, M Mostajabdaveh, Z Zhou. REALM Workshop @ EMNLP 2026, spotlight. https://openreview.net/forum?id=6hbm4tnWBl
-- MASPRM: Multi-Agent System Process Reward Model. M Yazdani, M Mostajabdaveh, Z Zhou, Y Xiong. arXiv:2510.24803, 2025. https://arxiv.org/abs/2510.24803
+- HEDGE: Gated Hypergraph Memory for Scalable Multi-Agent Debate. A Abaskohi, M Mostajabdaveh, Z Zhou. EACL 2027 (accepted). https://arxiv.org/abs/2610.38902
+- MASPRM: Multi-Agent System Process Reward Model. M Yazdani, M Mostajabdaveh, Z Zhou, Y Xiong. EACL 2027, main conference (accepted). https://arxiv.org/abs/2510.24803
 - COAgents: Multi-Agent Framework to Learn and Navigate Routing Problems Search Space. O Yakovenko, M Mostajabdaveh, et al. LION 20, 2026. https://arxiv.org/abs/2605.20618
 - Latent Heuristic Search: Continuous Optimization for Automated Algorithm Design. C Ahmed, M Mostajabdaveh, Z Zhou. LION 20, 2026. https://arxiv.org/abs/2605.17137
 - Evaluating LLM Reasoning in the Operations Research Domain with ORQA. M Mostajabdaveh et al. AAAI 2025. https://arxiv.org/abs/2412.17874
