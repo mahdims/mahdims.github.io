@@ -27,7 +27,7 @@ Full page: https://mahdims.github.io/research.html
 
 Full list: https://mahdims.github.io/publications.html
 
-- Discarded or Unreachable? Diagnosing and Repairing Spatial Relation Failure in Vision–Language Similarity. M Mostajabdaveh, Z Zhou. WACV 2027.
+- Discarded or Unreachable? Diagnosing and Repairing Spatial Relation Failure in Vision–Language Similarity. M Mostajabdaveh, Z Zhou. WACV 2027. https://arxiv.org/abs/2611.05565
 - LLM-Guided Evolution of Symbolic Acceleration Inequality Families for MILP (SAGE, formerly EvoCut). M Yazdani, M Mostajabdaveh, S Aref, Z Zhou. Transactions on Machine Learning Research, 2026. https://openreview.net/forum?id=rxJvINT074
 - SEDIMA: Cross-Run Hierarchical Insight Memory for Evolutionary Search Agents. A Abaskohi, M Mostajabdaveh, Z Zhou. REALM Workshop @ EMNLP 2026, spotlight. https://openreview.net/forum?id=6hbm4tnWBl
 - HEDGE: Gated Hypergraph Memory for Scalable Multi-Agent Debate. A Abaskohi, M Mostajabdaveh, Z Zhou. EACL 2027 (accepted). https://arxiv.org/abs/2610.38902
